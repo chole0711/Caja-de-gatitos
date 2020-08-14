@@ -1,0 +1,74 @@
+/* container row column */
+/* alineacion basada en el porcentaje del ancho del elemento */
+:root {
+  --col: 8.33333333333%;
+  /* Colores */
+  --green: #7acc2d;
+  --white: white;
+  --black: #313337;
+  /* Tipografia */
+  --normal: 12px;
+  /* Espaciado */
+  --space: 10px;
+  /* Box shadow */
+  --box: 0px 0 2px 1px #e6e5e9;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.row, .row_2, .row_3 {
+  display: flex;
+}
+
+.col-1 {
+  width: var(--col);
+}
+.col-2 {
+  width: calc(var(--col) * 2);
+}
+.col-3 {
+  width: calc(var(--col) * 3);
+}
+.col-4 {
+  width: calc(var(--col) * 4);
+}
+.col-5 {
+  width: calc(var(--col) * 5);
+}
+.col-6 {
+  width: calc(var(--col) * 6);
+}
+.col-7 {
+  width: calc(var(--col) * 7);
+}
+.col-8 {
+  width: calc(var(--col) * 8);
+}
+.col-9 {
+  width: calc(var(--col) * 9);
+}
+.col-10 {
+  width: calc(var(--col) * 10);
+}
+.col-11 {
+  width: calc(var(--col) * 11);
+}
+.col-12 {
+  width: calc(var(--col) * 12);
+}
+
+[class*="col-"] {
+  padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .row {
+    display: inherit;
+  }
+  [class*="col-"] {
+    width: 100%;
+  }
+} 
